@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCAP</title>
+
+  <!-- Typography: EB Garamond (Serif) & Public Sans (Sans) from VCAP Design System -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Header
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- VCAP Logo (Left) -->
+      <a href="/" class="header-brand" aria-label="VCAP Home">
+        <img src="assets/branding.webp" alt="VCAP Logo" class="header-logo-img">
+      </a>
+
+      <!-- Center Title -->
+      <div class="header-title">
+        School of Computer Science and Engineering
+      </div>
+
+      <!-- Home Button (Right) -->
+      <div class="header-actions">
+        <a href="/" class="header-home-btn" aria-label="Home">
+          <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Main Content Container
+       ======================================================================== -->
+  <main class="main-wrapper">
+    <section class="hero-card">
+
+      <!-- VIT Watermark / Logo (Top Left) -->
+      <img src="assets/vit/header-logo.webp" alt="VIT Logo" class="vit-logo">
+
+      <!-- ====================================================================
+           TOP SECTION: VCAP Branding & Introduction
+           ==================================================================== -->
+      <div class="top-intro-section">
+        <!-- VCAP Logo Mark + VCAP Wordmark -->
+        <div class="vcap-brand-row">
+          <div class="vcap-logo-mark-wrap">
+            <img src="assets/branding.webp" alt="VCAP logo mark" class="vcap-logo-mark-img">
+          </div>
+          <span class="vcap-brand-name">VCAP</span>
+        </div>
+
+        <!-- Introductory Text -->
+        <p class="vcap-intro-text">
+          A single integrated gateway to access and manage your academic requirements related to Projects, Examinations and Events. Explore Project Management for project report preparation, approvals, and review schedules; ReCAT for application submission and Event Management for faculty preparing invitations, managing the approval process and documenting academic events.
+        </p>
+      </div>
+
+      <!-- ====================================================================
+           BELOW: Data-Driven Portal Cards Grid (Scrollable Container)
+           ==================================================================== -->
+      <div class="portals-scroll-container" id="portals-scroll-container">
+        <div id="portal-cards-container" class="portal-cards-grid">
+          <!-- Dynamically populated from js/portals.js -->
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Dynamic Portals Script -->
+  <script src="js/portals.js"></script>
+</body>
+</html>
